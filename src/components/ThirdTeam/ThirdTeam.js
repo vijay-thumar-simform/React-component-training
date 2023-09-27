@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import John from "../../assets/John_Smith.png";
 import Natalie from "../../assets/Natalie_Fisher.png";
+import useTimeOnPageTracker from "../../customHooks/useTimeOnPageTracker";
 
 const ProfileOpt = ({ profile }) => {
   const { image, name, position, description } = profile;
@@ -37,6 +39,15 @@ const data = [
 ];
 
 const ThirdIntro = () => {
+  // useEffect(()=>{
+  //   console.log('function is executed in 3rd team')
+
+  //   return ()=>{
+  //     console.log('3rd team is unmounted from dom')
+  //   }
+  // },[])
+  
+  useTimeOnPageTracker('ThirdTeam-Page')
   return (
     <section className='third-section'>
       <div className='main-container'>

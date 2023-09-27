@@ -5,6 +5,17 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ThirdIntro from "./components/ThirdTeam/ThirdTeam";
 import Contact from "./components/ContactUs/Contact";
 import NavigationMenu from "./components/Navigation/NavigationMenu";
+import ReactGA from "react-ga4";
+
+const TRACKING_ID = "G-M31J9NTE9X";
+ReactGA.initialize(TRACKING_ID, {
+  gaOptions: {
+    debug_mode: true,
+  },
+  gtagOptions: {
+    debug_mode: true,
+  },
+});
 
 function App() {
   return (

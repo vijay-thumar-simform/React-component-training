@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProfilesContainer from "../ProfilesContainer/ProfilesContainer";
+import useTimeOnPageTracker from "../../customHooks/useTimeOnPageTracker";
 
 function TeamIntro() {
+  // useEffect(()=>{
+  //   console.log('function is executed in First team')
+  //   return ()=>{
+  //     console.log('First team is unmounted from dom')
+  //   };
+  // },[]);
+  
+  useTimeOnPageTracker('FirstTeam-Page')
+
   return (
     <section className='section-team'>
       <div className='container'>

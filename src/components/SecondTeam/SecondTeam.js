@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProfilesContainer from "../ProfilesContainer/ProfilesContainer";
 import "./SecondTeam.scss";
+import useTimeOnPageTracker from "../../customHooks/useTimeOnPageTracker";
 function SecondTeam() {
+  // useEffect(()=>{
+  //   console.log('function is executed in 2nd team')
+
+  //   return ()=>{
+  //     console.log('First team is unmounted 2nd from dom')
+  //   }
+  // },[])
+  
+  useTimeOnPageTracker('SecondTeam-Page')
+
   return (
     <section className='main-section'>
       <div className='inner-container'>
