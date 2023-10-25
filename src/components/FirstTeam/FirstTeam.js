@@ -9,8 +9,8 @@ function TeamIntro() {
   //     console.log('First team is unmounted from dom')
   //   };
   // },[]);
-  
-  useTimeOnPageTracker('FirstTeam-Page')
+
+  // useTimeOnPageTracker("FirstTeam-Page");
 
   return (
     <section className='section-team'>
@@ -23,9 +23,17 @@ function TeamIntro() {
             efforts to achieve a common goal
           </p>
         </div>
-        <div className="gallery-holder">
-          <ProfilesContainer classDesign="container-Gallery"/>
+        <div className='gallery-holder'>
+          <ProfilesContainer classDesign='container-Gallery' />
         </div>
+      </div>
+      <div>
+        <button id='tag-trigger'
+          onClick={() => {
+            console.log('data layer push clicked')
+            window.dataLayer.push({ Message: "Viju", user_name: 'Vijay' });
+            console.log('data layer push worked i think')
+          }}>click to send data variable gTag</button>
       </div>
     </section>
   );
